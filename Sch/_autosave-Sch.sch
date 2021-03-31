@@ -1,0 +1,101 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R?
+U 1 1 6064A4A8
+P 3200 3500
+F 0 "R?" V 2993 3500 50  0000 C CNN
+F 1 "1k" V 3084 3500 50  0000 C CNN
+F 2 "" V 3130 3500 50  0001 C CNN
+F 3 "~" H 3200 3500 50  0001 C CNN
+	1    3200 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6064AE27
+P 4150 4150
+F 0 "R?" H 4080 4104 50  0000 R CNN
+F 1 "1k" H 4080 4195 50  0000 R CNN
+F 2 "" V 4080 4150 50  0001 C CNN
+F 3 "~" H 4150 4150 50  0001 C CNN
+	1    4150 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 6064C27E
+P 4150 3750
+F 0 "RV?" H 4080 3796 50  0000 R CNN
+F 1 "0 - 1k" H 4080 3705 50  0000 R CNN
+F 2 "" H 4150 3750 50  0001 C CNN
+F 3 "~" H 4150 3750 50  0001 C CNN
+	1    4150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6064D07F
+P 4150 4350
+F 0 "#PWR?" H 4150 4100 50  0001 C CNN
+F 1 "GND" H 4155 4177 50  0000 C CNN
+F 2 "" H 4150 4350 50  0001 C CNN
+F 3 "" H 4150 4350 50  0001 C CNN
+	1    4150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 6064D454
+P 3350 3750
+F 0 "C?" H 3468 3796 50  0000 L CNN
+F 1 "4.7uF" H 3468 3705 50  0000 L CNN
+F 2 "" H 3388 3600 50  0001 C CNN
+F 3 "~" H 3350 3750 50  0001 C CNN
+	1    3350 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3600 3350 3500
+Wire Wire Line
+	4150 4350 4150 4300
+Text HLabel 3050 3500 0    50   Input ~ 0
+PA8_TIM1_CH1
+Text HLabel 4450 3750 2    50   Output ~ 0
+PA0_ADC1_CH0
+Wire Wire Line
+	4450 3750 4300 3750
+Connection ~ 3350 3500
+$Comp
+L power:GND #PWR?
+U 1 1 60650EA0
+P 3350 4000
+F 0 "#PWR?" H 3350 3750 50  0001 C CNN
+F 1 "GND" H 3355 3827 50  0000 C CNN
+F 2 "" H 3350 4000 50  0001 C CNN
+F 3 "" H 3350 4000 50  0001 C CNN
+	1    3350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4000 3350 3900
+Wire Wire Line
+	3350 3500 4150 3500
+Wire Wire Line
+	4150 3900 4150 4000
+Wire Wire Line
+	4150 3600 4150 3500
+$EndSCHEMATC
